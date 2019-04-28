@@ -2,7 +2,7 @@
 Ordering and Replaying of Execution Traces of Distributed Systems in the Context of Model-driven Development
 
 ## Demonstration Video
-[https://ibb.co/jyKC237] (https://youtu.be/SLnO32cWDI0)
+[<img src="https://ibb.co/jyKC237"] (https://youtu.be/SLnO32cWDI0)
 
 ## Background
 
