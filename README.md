@@ -50,12 +50,10 @@ orders and replays traces using the causality relation between traces.
 1 addGateWay () ;
 2 refineStructure () ;
 3 for ( SM in allStateMachines ){
-4   refineForSRO ( SM );
-5   for (s in allStates ) {
-6     s.addTrace ( traceType );
-7     s.guardCodes () ;
-8   }
-9  }
+4   for (t in transitions ) {
+5     s.addTrace ( traceType );
+6   }
+7  }
 ```
 
 The above code shows the main function for instrumenting the state machine of all capsules of the user-defined model. The
