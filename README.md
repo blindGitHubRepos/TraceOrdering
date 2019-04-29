@@ -16,50 +16,27 @@ orders and replays traces using the causality relation between traces.
     ├──src
     |   ├── com.controller                # All files for Creating Abstract Interpreter and Synthesizing variable values
     |   ├── com.antler4AC                 # All files for performing Action Code analysis  
-    |   ├── com.server                    # All files for receving traces from distributed clients
+    |   ├── com.server                    # All files for receiving traces from distributed clients
     |   ├── com.umlrtParser               # All files for performing structural/behavioural static analysis and creating PES
     ├── JAR                               # All required JAR files that should be added to the project 
     ├── Experiments                   
-    │   ├── Original                  # Original Models (including: Replication.zip, ParcelRouter.zip , ...)
-    │   ├── PhysicalTimeStamp         # Models that annotate traces with timestamps (e.g., MDebugger)
-    |   ├── VectorTime                # Models that annotate traces with Vector-Time
-    │   └── TimeStampFree             # Models that use no timestamp
+    │   ├── Original                      # Original Models (including: Replication.zip, ParcelRouter.zip , ...)
+    │   ├── PhysicalTimeStamp             # Models that annotate traces with timestamps (e.g., MDebugger)
+    |   ├── VectorTime                    # Models that annotate traces with Vector-Time
+    │   └── TimeStampFree                 # Models that use no timestamp
     └── MDebugger                     
-    │   ├── DebuggerModel             # The Debugging Agent which is developed using UML-RT  
-    |   ├── Model_instrumentation     # All the developed script for the model transformation 
-    |   ├── RealTimeLibs              # All lib that should be added into the RTS directory
-    │   ├── MetaModels                # All required metamodels for executing the transformation
-    |   │   ├── Ecore.ecore
-    |   │   ├── RTCppProperties.ecore
-    |   │   ├── RTCppProperties.profile.uml
-    |   |   ├── UML.ecore
-    |   │   ├── UMLPrimitiveType.uml
-    |   │   ├── UMLRT-RTS.uml
-    |   │   ├── UMLRTStateMachines.ecore
-    |   │   ├── UMLRealTime.ecore
-    |   │   ├── UMLRealTimeSM-addendum.dsmlvalidation.uml
-    |   │   ├── UMLRealTimeSM-addendum.profile.uml
-    |   │   ├── UMLRealTimeSM.genmodel
-    |   │   ├── default.ecore
-    |   │   ├── uml-rt.dsmlvalidation.uml
-    |   │   ├── uml-rt.genmode
-    |   │   └── uml-rt.profile.uml
+    │   ├── DebuggerModel                 # The Debugging Agent which is developed using UML-RT  
+    |   ├── Model_instrumentation         # All the developed script for the model transformation 
+    |   ├── RealTimeLibs                  # All lib that should be added into the RTS directory
+    │   └── MetaModels                    # All required metamodels for executing the transformation
 
-#### Main loop of the transformation
-```
-1 addGateWay () ;
-2 refineStructure () ;
-3 for ( SM in allStateMachines ){
-4   for (t in transitions ) {
-5     s.addTrace ( traceType );
-6   }
-7  }
-```
 
-The above code shows the main function for instrumenting the state machine of all capsules of the user-defined model. The
-addGateway function is responsible for enabling the model to interface with the debugger. It adds a UML-RT port to
-each capsule.
+# Usage
+First, import the JAR files into the project/libraries. Then add the uml file of the original models in the Experiments into the project/resources. Finally, run the controller at (src/com/controller/Controller.java). It takes a couple of seconds to perform static analysis and extract all the Possible Execution Paths (PES) form the uml file.
 
+Now the software is ready to receive traces from clients at TCP port 8001.
+
+In order to provide distributed clients from the given models, just follow the instruction at [Distribution for UML-RT](https://github.com/kjahed/papyrusrt-distribution).
 
 ## Background
 
