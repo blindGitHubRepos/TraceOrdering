@@ -74,3 +74,5 @@ The following links may provide useful resources regarding the UML-RT concepts, 
 [UML-RT Language Concepts](https://pdfs.semanticscholar.org/7fae/fac63155a404e431c97201f89fc8c37a7d62.pdf)
 
 [An executable formal semantics for UML-RT](https://link.springer.com/article/10.1007/s10270-014-0399-z)
+
+[Distribution for UML-RT](https://github.com/kjahed/papyrusrt-distribution)
