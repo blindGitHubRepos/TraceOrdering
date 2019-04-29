@@ -13,11 +13,12 @@ orders and replays traces using the causality relation between traces.
 
 ## Source code layout
     .
-    ├── com.controller                # All files for Creating Abstract Interpreter and Synthesizing variable values
-    ├── com.antler4AC                 # All files for performing Action Code analysis  
-    ├── com.server                    # All files for making the TCP socket connection between distributed clients and server 
-    ├── com.umlrtParser               # All files for performing structural/behavioural static analysis and creating PES
-    ├── JAR                           # All required JAR files that should be added to the project 
+    ├──src
+    |   ├── com.controller                # All files for Creating Abstract Interpreter and Synthesizing variable values
+    |   ├── com.antler4AC                 # All files for performing Action Code analysis  
+    |   ├── com.server                    # All files for receving traces from distributed clients
+    |   ├── com.umlrtParser               # All files for performing structural/behavioural static analysis and creating PES
+    ├── JAR                               # All required JAR files that should be added to the project 
     ├── Experiments                   
     │   ├── Original                  # Original Models (including: Replication.zip, ParcelRouter.zip , ...)
     │   ├── PhysicalTimeStamp         # Models that annotate traces with timestamps (e.g., MDebugger)
