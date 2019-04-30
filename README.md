@@ -8,7 +8,7 @@ orders and replays traces using the causality relation between traces.
 > In order to show how our approach really works, we use and opensource web-based diagraming tool called @drawio which uses  mxGraph library. You can find more information in: [Drawio in Github](https://github.com/jgraph/drawio).
 
 
-[<p style="text-align:center;"><img src="https://i.ibb.co/nbM8rL6/You-Tube-icon.png" width="193" height="130"></p>](https://youtu.be/SLnO32cWDI0)
+[<p style="text-align:center;"><img src="https://i.ibb.co/nbM8rL6/You-Tube-icon.png" width="193" height="130"></p>](https://youtu.be/YQBoLOBpnlo)
 
 
 ## Source code layout
