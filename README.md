@@ -4,8 +4,8 @@
 Ordering and replaying of execution traces of distributed systems is a challenging problem. State-of-the-art approaches annotate the traces with logical/physical timestamps and then order them in accordance with their timestamps. Physical timestamps are often inaccurate due to issues of synchronization and clock precision, and logical timestamps cause an increase in the size of traces as the number of nodes in the distributed system increases. This paper concerns trace ordering and replay in the context of model-driven development of distributed systems. By leveraging the abstract nature of models and existing model analysis and transformation techniques, we introduce a fully automated, efficient, and accurate method of trace collection and replay, without the use of timestamps. Instead, we use an abstract interpretation of models which
 orders and replays traces using the causality relation between traces.
 
-## A demonstration Video
-> In order to show how our approach really works, we use and opensource web-based diagraming tool called @drawio which uses  mxGraph library. You can find more information in: [Drawio in Github](https://github.com/jgraph/drawio).
+## A Demonstration Video
+> The graphical user interface of our tool is developed on top of the   @drawio which uses mxGraph library. You can find more information in [Drawio in Github](https://github.com/jgraph/drawio).
 
 
 [<p style="text-align:center;"><img src="https://i.ibb.co/nbM8rL6/You-Tube-icon.png" width="193" height="130"></p>](https://youtu.be/YQBoLOBpnlo)
@@ -17,7 +17,7 @@ orders and replays traces using the causality relation between traces.
     |   ├── com.controller                # All files for Creating Abstract Interpreter and Synthesizing variable values
     |   ├── com.antler4AC                 # All files for performing Action Code analysis  
     |   ├── com.server                    # All files for receiving traces from distributed clients
-    |   ├── com.umlrtParser               # All files for performing structural/behavioural static analysis and creating PES
+    |   ├── com.umlrtParser               # All files for performing structural/behavioral static analysis and creating PES
     ├── JAR                               # All required JAR files that should be added to the project 
     ├── Experiments                   
     │   ├── Original                      # Original Models (including: Replication.zip, ParcelRouter.zip , ...)
@@ -32,9 +32,10 @@ orders and replays traces using the causality relation between traces.
 
 
 # Usage
-First, import the JAR files into the project/libraries. Then add the uml file of the original models in the Experiments into the project/resources. Finally, run the controller at (src/com/controller/Controller.java). It takes a couple of seconds to perform static analysis and extract all the Possible Execution Paths (PES) form the uml file.
+First, import the JAR files into the project/libraries. Then add the UML file of the original models in the Experiments into the project/resources. Finally, run the controller at (src/com/controller/Controller.java). It takes a couple of seconds to perform static analysis and extract all the Possible Execution Paths (PES) form the UML file.
 
 Now the software is ready to receive traces from clients at TCP port 8001.
+
 
 In order to provide distributed clients from the given models, just follow the instruction at [Distribution for UML-RT](https://github.com/kjahed/papyrusrt-distribution).
 
